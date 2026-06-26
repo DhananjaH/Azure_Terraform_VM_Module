@@ -1,11 +1,11 @@
 # data "azurerm_resources" "all_rs" {
 #     type = "Microsoft.Resources/resourceGroups"
-
+  
 # }
 
 # output "all_res_name" {
 #     value = [for rs in data.azurerm_resources.all_rs.resources : rs.name]
-
+  
 # }
 
 
@@ -76,3 +76,13 @@
 # output "vm_public_ip" {
 #   value = data.azurerm_public_ip.pip.ip_address
 # }
+
+output "app_subnet_id" {
+    value = data.azurerm_subnet.app.id
+  
+}
+
+output "public_ip" {
+    value = azurerm_public_ip.pip.ip_address
+  
+}
